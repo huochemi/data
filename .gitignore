@@ -144,3 +144,9 @@ vite.config.ts.timestamp-*
 
 # custom files
 .DS_Store
+
+# 视频原片不入库（单文件几十 MB，会永久留在 git 历史并快速吃掉 Pages 1 GB 配额），
+# 只入库管线转码出的 <名>_web.mp4（约 8~15 MB、faststart、可直接流式播放）。
+# 原片留在本地当"真相源"：fix-gps 补坐标写在原片上，npm run photos 转码时自动带上
+*.mp4
+!*_web.mp4
