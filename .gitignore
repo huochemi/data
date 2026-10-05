@@ -150,3 +150,14 @@ vite.config.ts.timestamp-*
 # 原片留在本地当"真相源"：fix-gps 补坐标写在原片上，npm run photos 转码时自动带上
 *.mp4
 !*_web.mp4
+
+# 原图（不可再生）已迁出本仓 → ../photos-originals（私有存档仓，形态 B）
+# 本仓只留可再生的派生图（_thumb.webp / _display.avif / _web.mp4）与 index.json。
+# 决策与迁移顺序见 docs/plans/2026-10-04-data-repo-longevity.md
+# 现存三种大小写形态都排除（.JPG / .HEIC / .jpeg）
+*.JPG
+*.jpg
+*.HEIC
+*.heic
+*.jpeg
+*.JPEG
